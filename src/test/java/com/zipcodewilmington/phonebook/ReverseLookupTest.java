@@ -17,6 +17,7 @@ public class ReverseLookupTest {
         String actualName = phoneBook.reverseLookup(phoneNumber);
 
         // then
+
         Assert.assertEquals(expectedName, actualName);
     }
 
