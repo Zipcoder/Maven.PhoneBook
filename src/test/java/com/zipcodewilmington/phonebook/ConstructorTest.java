@@ -6,6 +6,7 @@ import org.junit.Test;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.TreeMap;
 
 public class ConstructorTest {
     @Test
@@ -15,7 +16,7 @@ public class ConstructorTest {
         PhoneBook phoneBook = new PhoneBook();
 
         // then
-        Assert.assertTrue(phoneBook.getMap() instanceof HashMap);
+        Assert.assertTrue(phoneBook.getMap() instanceof TreeMap);
     }
 
     @Test
