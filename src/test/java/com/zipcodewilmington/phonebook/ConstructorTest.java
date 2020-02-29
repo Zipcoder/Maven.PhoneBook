@@ -3,9 +3,7 @@ package com.zipcodewilmington.phonebook;
 import org.junit.Assert;
 import org.junit.Test;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class ConstructorTest {
     @Test
@@ -15,13 +13,13 @@ public class ConstructorTest {
         PhoneBook phoneBook = new PhoneBook();
 
         // then
-        Assert.assertTrue(phoneBook.getMap() instanceof HashMap);
+        Assert.assertTrue(phoneBook.getMap() instanceof LinkedHashMap);
     }
 
     @Test
     public void testNonNullaryConstructor() {
         // given
-        Map<String, List<String>> dependency = new HashMap<>();
+        LinkedHashMap<String, List<String>> dependency = new LinkedHashMap<>();
 
         // when
         PhoneBook phoneBook = new PhoneBook(dependency);

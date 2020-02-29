@@ -11,13 +11,15 @@ public class ReverseLookupTest {
         String expectedName = "John";
         String phoneNumber = "302-555-4545";
         phoneBook.add(expectedName, phoneNumber);
+      System.out.println(phoneBook.getMap().toString());;
+//        Assert.assertEquals(1,0);
         Assert.assertTrue(phoneBook.hasEntry(phoneNumber));
 
         // when
         String actualName = phoneBook.reverseLookup(phoneNumber);
 
         // then
-        Assert.assertEquals(expectedName, actualName);
+        Assert.assertEquals(expectedName, actualName);/**/
     }
 
     @Test
@@ -51,5 +53,10 @@ public class ReverseLookupTest {
 
         // then
         Assert.assertEquals(expectedName, actualName);
+    }
+
+    @Test
+    public void test4() {
+
     }
 }
